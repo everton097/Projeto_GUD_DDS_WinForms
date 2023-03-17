@@ -19,6 +19,8 @@ namespace Escola.view
 {
     public partial class FAluno : Form
     {
+        private string status = "";
+
         public FAluno()
         {
             InitializeComponent();
@@ -83,12 +85,12 @@ namespace Escola.view
             {
                 habilitarCampos();
                 limparCampos();
+                status = "inserindo";
             }
             else
             {
                 MessageBox.Show("Você ja esta criando um cadrastro!");
             }
-                
         }
 
         private void FAluno_Load(object sender, EventArgs e)
@@ -116,7 +118,19 @@ namespace Escola.view
             // 2 passo criar um obj do tipo alunoControler e cadrastrar o metodo cadrastraraluno
 
             alunoController controller= new alunoController();
-            controller.cadrastroAluno(obj);
+
+                if(status == "inserindo")
+                {
+                    controller.cadrastroAluno(obj);
+                    status= "success";
+                }else if(status == "alterando")
+                {
+                    obj.Id = int.Parse(txtid.Text);
+                    controller.alterarAluno(obj);
+                    status= "success";
+                }
+
+            
 
             limparCampos();
             desabilitarCampos();
@@ -165,6 +179,7 @@ namespace Escola.view
         {
             habilitarCampos();
             botaosalvar.Enabled = true;
+            status = "alterando";
         }
     }
 }

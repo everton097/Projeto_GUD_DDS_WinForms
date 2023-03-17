@@ -53,7 +53,6 @@ namespace Escola.controller
                 conexao.Close();
 
 
-
             }
             catch (Exception ex)
             {
@@ -125,6 +124,46 @@ namespace Escola.controller
 
         }
 
+        public void alterarAluno(Aluno obj)
+        {
+            try
+            {
+                //1 passo - definir o comando sql
+                string sql = @"update aluno set nome=@nome,rg=@rg,cpf=@cpf,email=@email,
+                celular=@celular,cep=@cep,endereco=@endereco,numero=@numero,bairro=@bairro,
+                cidade=@cidade,uf=@uf where id=@id;";
+
+                //2´passo - organizar o comando sql
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@nome", obj.nome);
+                executacmd.Parameters.AddWithValue("@rg", obj.rg);
+                executacmd.Parameters.AddWithValue("@cpf", obj.cpf);
+                executacmd.Parameters.AddWithValue("@email", obj.email);
+                executacmd.Parameters.AddWithValue("@celular", obj.celular);
+                executacmd.Parameters.AddWithValue("@cep", obj.cep);
+                executacmd.Parameters.AddWithValue("@endereco", obj.endereco);
+                executacmd.Parameters.AddWithValue("@numero", obj.numero);
+                executacmd.Parameters.AddWithValue("@bairro", obj.bairro);
+                executacmd.Parameters.AddWithValue("@cidade", obj.cidade);
+                executacmd.Parameters.AddWithValue("@uf", obj.uf);
+                executacmd.Parameters.AddWithValue("@id", obj.Id);
+
+                //3 passso - abrir a conexao executar o comando osql
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+                MessageBox.Show("Aluno alterado com sucesso!");
+
+                //4 passo fechar o banco de dados
+                conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Aconteceu um erro: " + ex.Message);
+            }
+
+        }
 
 
     }
