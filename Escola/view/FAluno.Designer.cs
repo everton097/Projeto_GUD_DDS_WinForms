@@ -122,6 +122,7 @@
             this.botaoeditar.TabIndex = 3;
             this.botaoeditar.Text = "Editar";
             this.botaoeditar.UseVisualStyleBackColor = false;
+            this.botaoeditar.Click += new System.EventHandler(this.botaoeditar_Click);
             // 
             // botaoexcluir
             // 

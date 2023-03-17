@@ -160,5 +160,11 @@ namespace Escola.view
 
             botaoeditar.Enabled = true;//Habilita o botão EDITAR
         }
+
+        private void botaoeditar_Click(object sender, EventArgs e)
+        {
+            habilitarCampos();
+            botaosalvar.Enabled = true;
+        }
     }
 }
