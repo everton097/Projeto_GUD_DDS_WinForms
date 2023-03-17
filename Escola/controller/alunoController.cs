@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,6 +60,71 @@ namespace Escola.controller
                 MessageBox.Show("Aconteceu um erro: " + ex.Message);
             }
         }
+
+
+        public DataTable listarAlunos()
+        {
+            try
+            {
+                //1 passo - Criar o DataTable e o comando SQL
+                DataTable tabela = new DataTable();
+                string sql = "SELECT * FROM aluno;";
+
+                //2 passo - Organizar o SQL e Executar
+                MySqlCommand  executacmd = new MySqlCommand(sql,conexao);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //3 passo - Criar o adapter para preencher os dados na datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabela);
+
+                //4 passo - Fechar a conexão do DB
+                conexao.Clone();
+
+                return tabela;
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Erro ao executar o comando SQL: "+ ex);
+                return null;
+            }
+        }
+
+
+
+        public DataTable buscaPorNome(string nome)
+        {
+            try
+            {
+                //1 passo - Criar o DataTable e o comando SQL
+                DataTable tabela = new DataTable();
+                String sql = "SELECT * FROM aluno WHERE nome LIKE @nome;";
+
+                //2 passo - Organizar o comando SQL e executar 
+                MySqlCommand executaCMD = new MySqlCommand(sql,conexao);
+                executaCMD.Parameters.AddWithValue("@nome", nome);
+
+                conexao.Open();
+                executaCMD.ExecuteNonQuery();
+
+                //3 passo - Criar o adapter para preencher os dados no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executaCMD);
+                da.Fill(tabela);
+
+                //4 passo - fechar
+                conexao.Close();
+                return tabela;
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Erro ao executar sql: " + ex);
+                return null;
+            }
+
+
+        }
+
 
 
     }

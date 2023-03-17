@@ -37,6 +37,8 @@
             this.botaonovo = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtrg = new System.Windows.Forms.MaskedTextBox();
+            this.txtnumero = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtuf = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -62,10 +64,8 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabelaAluno = new System.Windows.Forms.DataGridView();
             this.bPesquisar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtPesquisar = new System.Windows.Forms.Label();
-            this.txtnumero = new System.Windows.Forms.MaskedTextBox();
-            this.txtrg = new System.Windows.Forms.MaskedTextBox();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.LabelNomePesquisa = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -82,7 +82,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(793, 63);
+            this.panel1.Size = new System.Drawing.Size(1262, 63);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -104,10 +104,10 @@
             this.panel2.Controls.Add(this.botaosalvar);
             this.panel2.Controls.Add(this.botaonovo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 429);
+            this.panel2.Location = new System.Drawing.Point(0, 606);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(793, 67);
+            this.panel2.Size = new System.Drawing.Size(1262, 67);
             this.panel2.TabIndex = 1;
             // 
             // botaoeditar
@@ -173,7 +173,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(793, 366);
+            this.tabControl1.Size = new System.Drawing.Size(1262, 543);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -206,10 +206,29 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(785, 337);
+            this.tabPage1.Size = new System.Drawing.Size(1254, 514);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados do Aluno";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txtrg
+            // 
+            this.txtrg.Location = new System.Drawing.Point(396, 67);
+            this.txtrg.Margin = new System.Windows.Forms.Padding(4);
+            this.txtrg.Mask = "#.###.###";
+            this.txtrg.Name = "txtrg";
+            this.txtrg.Size = new System.Drawing.Size(74, 22);
+            this.txtrg.TabIndex = 2;
+            // 
+            // txtnumero
+            // 
+            this.txtnumero.Location = new System.Drawing.Point(447, 203);
+            this.txtnumero.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnumero.Mask = "00000";
+            this.txtnumero.Name = "txtnumero";
+            this.txtnumero.Size = new System.Drawing.Size(43, 22);
+            this.txtnumero.TabIndex = 8;
+            this.txtnumero.ValidatingType = typeof(int);
             // 
             // label13
             // 
@@ -223,6 +242,7 @@
             // 
             // txtuf
             // 
+            this.txtuf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtuf.FormattingEnabled = true;
             this.txtuf.Items.AddRange(new object[] {
             "AC",
@@ -256,7 +276,7 @@
             this.txtuf.Margin = new System.Windows.Forms.Padding(4);
             this.txtuf.Name = "txtuf";
             this.txtuf.Size = new System.Drawing.Size(73, 24);
-            this.txtuf.TabIndex = 22;
+            this.txtuf.TabIndex = 11;
             // 
             // label12
             // 
@@ -274,7 +294,7 @@
             this.txtcidade.Margin = new System.Windows.Forms.Padding(4);
             this.txtcidade.Name = "txtcidade";
             this.txtcidade.Size = new System.Drawing.Size(265, 22);
-            this.txtcidade.TabIndex = 20;
+            this.txtcidade.TabIndex = 10;
             // 
             // label11
             // 
@@ -292,7 +312,7 @@
             this.txtbairro.Margin = new System.Windows.Forms.Padding(4);
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(265, 22);
-            this.txtbairro.TabIndex = 18;
+            this.txtbairro.TabIndex = 9;
             // 
             // label10
             // 
@@ -320,7 +340,7 @@
             this.txtendereco.Margin = new System.Windows.Forms.Padding(4);
             this.txtendereco.Name = "txtendereco";
             this.txtendereco.Size = new System.Drawing.Size(265, 22);
-            this.txtendereco.TabIndex = 14;
+            this.txtendereco.TabIndex = 7;
             // 
             // txtcep
             // 
@@ -329,7 +349,7 @@
             this.txtcep.Mask = "##.###-###";
             this.txtcep.Name = "txtcep";
             this.txtcep.Size = new System.Drawing.Size(94, 22);
-            this.txtcep.TabIndex = 13;
+            this.txtcep.TabIndex = 6;
             // 
             // label8
             // 
@@ -348,7 +368,7 @@
             this.txtcelular.Mask = "(##) # ####-####";
             this.txtcelular.Name = "txtcelular";
             this.txtcelular.Size = new System.Drawing.Size(120, 22);
-            this.txtcelular.TabIndex = 11;
+            this.txtcelular.TabIndex = 5;
             // 
             // label7
             // 
@@ -376,7 +396,7 @@
             this.txtemail.Margin = new System.Windows.Forms.Padding(4);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(265, 22);
-            this.txtemail.TabIndex = 8;
+            this.txtemail.TabIndex = 4;
             // 
             // txtcpf
             // 
@@ -385,7 +405,7 @@
             this.txtcpf.Mask = "###.###.###-##";
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(111, 22);
-            this.txtcpf.TabIndex = 7;
+            this.txtcpf.TabIndex = 3;
             // 
             // label5
             // 
@@ -423,7 +443,7 @@
             this.txtnome.Margin = new System.Windows.Forms.Padding(4);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(265, 22);
-            this.txtnome.TabIndex = 2;
+            this.txtnome.TabIndex = 1;
             // 
             // label2
             // 
@@ -448,13 +468,13 @@
             // 
             this.tabPage2.Controls.Add(this.tabelaAluno);
             this.tabPage2.Controls.Add(this.bPesquisar);
-            this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.txtPesquisar);
+            this.tabPage2.Controls.Add(this.LabelNomePesquisa);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(785, 337);
+            this.tabPage2.Size = new System.Drawing.Size(1254, 514);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consultar";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -464,13 +484,15 @@
             this.tabelaAluno.AllowUserToAddRows = false;
             this.tabelaAluno.AllowUserToDeleteRows = false;
             this.tabelaAluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelaAluno.Location = new System.Drawing.Point(7, 63);
+            this.tabelaAluno.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabelaAluno.Location = new System.Drawing.Point(4, 63);
             this.tabelaAluno.Name = "tabelaAluno";
             this.tabelaAluno.ReadOnly = true;
             this.tabelaAluno.RowHeadersWidth = 51;
             this.tabelaAluno.RowTemplate.Height = 24;
-            this.tabelaAluno.Size = new System.Drawing.Size(770, 267);
+            this.tabelaAluno.Size = new System.Drawing.Size(1246, 447);
             this.tabelaAluno.TabIndex = 3;
+            this.tabelaAluno.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaAluno_CellDoubleClick);
             // 
             // bPesquisar
             // 
@@ -484,47 +506,29 @@
             this.bPesquisar.TabIndex = 2;
             this.bPesquisar.Text = "Pesquisar";
             this.bPesquisar.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(66, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 22);
-            this.textBox1.TabIndex = 1;
+            this.bPesquisar.Click += new System.EventHandler(this.bPesquisar_Click);
             // 
             // txtPesquisar
             // 
-            this.txtPesquisar.AutoSize = true;
-            this.txtPesquisar.Location = new System.Drawing.Point(17, 21);
+            this.txtPesquisar.Location = new System.Drawing.Point(66, 20);
             this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(47, 16);
-            this.txtPesquisar.TabIndex = 0;
-            this.txtPesquisar.Text = "Nome:";
+            this.txtPesquisar.Size = new System.Drawing.Size(182, 22);
+            this.txtPesquisar.TabIndex = 1;
             // 
-            // txtnumero
+            // LabelNomePesquisa
             // 
-            this.txtnumero.Location = new System.Drawing.Point(447, 203);
-            this.txtnumero.Margin = new System.Windows.Forms.Padding(4);
-            this.txtnumero.Mask = "00000";
-            this.txtnumero.Name = "txtnumero";
-            this.txtnumero.Size = new System.Drawing.Size(43, 22);
-            this.txtnumero.TabIndex = 24;
-            this.txtnumero.ValidatingType = typeof(int);
-            // 
-            // txtrg
-            // 
-            this.txtrg.Location = new System.Drawing.Point(396, 67);
-            this.txtrg.Margin = new System.Windows.Forms.Padding(4);
-            this.txtrg.Mask = "#.###.###";
-            this.txtrg.Name = "txtrg";
-            this.txtrg.Size = new System.Drawing.Size(74, 22);
-            this.txtrg.TabIndex = 25;
+            this.LabelNomePesquisa.AutoSize = true;
+            this.LabelNomePesquisa.Location = new System.Drawing.Point(17, 21);
+            this.LabelNomePesquisa.Name = "LabelNomePesquisa";
+            this.LabelNomePesquisa.Size = new System.Drawing.Size(47, 16);
+            this.LabelNomePesquisa.TabIndex = 0;
+            this.LabelNomePesquisa.Text = "Nome:";
             // 
             // FAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 496);
+            this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -582,8 +586,8 @@
         private System.Windows.Forms.ComboBox txtuf;
         private System.Windows.Forms.DataGridView tabelaAluno;
         private System.Windows.Forms.Button bPesquisar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label txtPesquisar;
+        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.Label LabelNomePesquisa;
         private System.Windows.Forms.MaskedTextBox txtnumero;
         private System.Windows.Forms.MaskedTextBox txtrg;
     }

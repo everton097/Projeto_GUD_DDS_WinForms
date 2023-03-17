@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using Escola;
 using Escola.controller;
 using Escola.model;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Escola.view
 {
@@ -113,8 +115,43 @@ namespace Escola.view
 
             limparCampos();
             desabilitarCampos();
+            tabelaAluno.DataSource = controller.listarAlunos();
             }
             else { MessageBox.Show("Primeiro crie um novo cadrastro!"); }
+        }
+
+        private void bPesquisar_Click(object sender, EventArgs e)
+        {
+            string nome = "%"+ txtPesquisar.Text+"%";
+            alunoController controller = new alunoController();
+
+            tabelaAluno.DataSource = controller.buscaPorNome(nome);
+            if (tabelaAluno.Rows.Count == 0)
+            {
+                MessageBox.Show("Nenhum aluno encontrado com esse Nome.");
+                tabelaAluno.DataSource = controller.listarAlunos();
+            }
+        }
+
+        private void tabelaAluno_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            //Pegar os itens da linha seecionada para o texbox
+
+            txtid.Text = tabelaAluno.CurrentRow.Cells[0].Value.ToString();
+            txtnome.Text = tabelaAluno.CurrentRow.Cells[1].Value.ToString();
+            txtrg.Text = tabelaAluno.CurrentRow.Cells[2].Value.ToString();
+            txtcpf.Text = tabelaAluno.CurrentRow.Cells[3].Value.ToString();
+            txtemail.Text = tabelaAluno.CurrentRow.Cells[4].Value.ToString();
+            txtcelular.Text = tabelaAluno.CurrentRow.Cells[5].Value.ToString();
+            txtcep.Text = tabelaAluno.CurrentRow.Cells[6].Value.ToString();
+            txtendereco.Text = tabelaAluno.CurrentRow.Cells[7].Value.ToString();
+            txtnumero.Text = tabelaAluno.CurrentRow.Cells[8].Value.ToString();
+            txtbairro.Text = tabelaAluno.CurrentRow.Cells[9].Value.ToString();
+            txtcidade.Text = tabelaAluno.CurrentRow.Cells[10].Value.ToString();
+            txtuf.Text = tabelaAluno.CurrentRow.Cells[11].Value.ToString();
+
+            tabControl1.SelectedTab = tabPage1;
         }
     }
 }
