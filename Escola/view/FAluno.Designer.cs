@@ -224,7 +224,7 @@
             // 
             this.txtnumero.Location = new System.Drawing.Point(447, 203);
             this.txtnumero.Margin = new System.Windows.Forms.Padding(4);
-            this.txtnumero.Mask = "00000";
+            this.txtnumero.Mask = "0000";
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(43, 22);
             this.txtnumero.TabIndex = 8;

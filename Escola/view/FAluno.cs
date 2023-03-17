@@ -37,6 +37,10 @@ namespace Escola.view
             txtbairro.Enabled = false;
             txtcidade.Enabled = false;
             txtuf.Enabled = false;
+
+            botaoeditar.Enabled = false;
+            botaoexcluir.Enabled = false;
+            botaosalvar.Enabled = false;
         }
 
         public void habilitarCampos()
@@ -53,6 +57,7 @@ namespace Escola.view
             txtbairro.Enabled = true;
             txtcidade.Enabled = true;
             txtuf.Enabled = true;
+            botaosalvar.Enabled = true;
         }
 
         public void limparCampos()
@@ -152,6 +157,8 @@ namespace Escola.view
             txtuf.Text = tabelaAluno.CurrentRow.Cells[11].Value.ToString();
 
             tabControl1.SelectedTab = tabPage1;
+
+            botaoeditar.Enabled = true;//Habilita o botão EDITAR
         }
     }
 }
