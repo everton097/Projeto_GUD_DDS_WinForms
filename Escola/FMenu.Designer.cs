@@ -36,16 +36,15 @@
             this.BotaoMaximizar = new System.Windows.Forms.Button();
             this.BotaoRestaurar = new System.Windows.Forms.Button();
             this.BarraMenuLataral = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.sair = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.optAluno = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.panelSubTela = new System.Windows.Forms.Panel();
             this.BarraDeTitulo.SuspendLayout();
             this.BarraMenuLataral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraDeTitulo
@@ -138,41 +137,42 @@
             // BarraMenuLataral
             // 
             this.BarraMenuLataral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.BarraMenuLataral.Controls.Add(this.button1);
+            this.BarraMenuLataral.Controls.Add(this.sair);
             this.BarraMenuLataral.Controls.Add(this.panel3);
             this.BarraMenuLataral.Controls.Add(this.button4);
             this.BarraMenuLataral.Controls.Add(this.panel2);
-            this.BarraMenuLataral.Controls.Add(this.button3);
+            this.BarraMenuLataral.Controls.Add(this.optAluno);
             this.BarraMenuLataral.Dock = System.Windows.Forms.DockStyle.Left;
             this.BarraMenuLataral.Location = new System.Drawing.Point(0, 30);
             this.BarraMenuLataral.Name = "BarraMenuLataral";
-            this.BarraMenuLataral.Size = new System.Drawing.Size(200, 643);
+            this.BarraMenuLataral.Size = new System.Drawing.Size(170, 643);
             this.BarraMenuLataral.TabIndex = 3;
             // 
-            // button1
+            // sair
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.sair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(11, 586);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 45);
-            this.button1.TabIndex = 10;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.sair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.sair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.sair.FlatAppearance.BorderSize = 0;
+            this.sair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sair.ForeColor = System.Drawing.Color.White;
+            this.sair.Image = ((System.Drawing.Image)(resources.GetObject("sair.Image")));
+            this.sair.Location = new System.Drawing.Point(11, 586);
+            this.sair.Name = "sair";
+            this.sair.Size = new System.Drawing.Size(55, 45);
+            this.sair.TabIndex = 10;
+            this.sair.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.sair.UseVisualStyleBackColor = false;
+            this.sair.Click += new System.EventHandler(this.sair_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel3.Location = new System.Drawing.Point(9, 47);
+            this.panel3.Location = new System.Drawing.Point(7, 47);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5, 35);
             this.panel3.TabIndex = 9;
@@ -195,48 +195,36 @@
             this.button4.Text = "Cursos";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.Location = new System.Drawing.Point(9, 6);
+            this.panel2.Location = new System.Drawing.Point(7, 6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(5, 35);
             this.panel2.TabIndex = 7;
             // 
-            // button3
+            // optAluno
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 35);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Alunos";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(200, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1062, 643);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.optAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.optAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.optAluno.FlatAppearance.BorderSize = 0;
+            this.optAluno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.optAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.optAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optAluno.ForeColor = System.Drawing.Color.White;
+            this.optAluno.Image = ((System.Drawing.Image)(resources.GetObject("optAluno.Image")));
+            this.optAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.optAluno.Location = new System.Drawing.Point(12, 6);
+            this.optAluno.Name = "optAluno";
+            this.optAluno.Size = new System.Drawing.Size(179, 35);
+            this.optAluno.TabIndex = 6;
+            this.optAluno.Text = "Alunos";
+            this.optAluno.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.optAluno.UseVisualStyleBackColor = false;
+            this.optAluno.Click += new System.EventHandler(this.optAluno_Click);
             // 
             // contextMenuStrip1
             // 
@@ -244,12 +232,23 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // panelSubTela
+            // 
+            this.panelSubTela.BackColor = System.Drawing.Color.Transparent;
+            this.panelSubTela.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelSubTela.BackgroundImage")));
+            this.panelSubTela.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelSubTela.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSubTela.Location = new System.Drawing.Point(170, 30);
+            this.panelSubTela.Name = "panelSubTela";
+            this.panelSubTela.Size = new System.Drawing.Size(1092, 643);
+            this.panelSubTela.TabIndex = 4;
+            // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panelSubTela);
             this.Controls.Add(this.BarraMenuLataral);
             this.Controls.Add(this.BarraDeTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -259,7 +258,6 @@
             this.Text = "Sistema Escola";
             this.BarraDeTitulo.ResumeLayout(false);
             this.BarraMenuLataral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -267,17 +265,17 @@
         #endregion
         private System.Windows.Forms.Panel BarraDeTitulo;
         private System.Windows.Forms.Panel BarraMenuLataral;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BotaoFechar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button optAluno;
         private System.Windows.Forms.Button BotaoRestaurar;
         private System.Windows.Forms.Button BotaoMinimizar;
         private System.Windows.Forms.Button BotaoMaximizar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button sair;
+        private System.Windows.Forms.Panel panelSubTela;
     }
 }
 

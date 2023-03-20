@@ -72,10 +72,64 @@ namespace Escola
             Application.Exit();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        string telaAluno = "fechada";
+        string telaCurso = "fechada";
+
+        private void AbrirTela(object formTela)
         {
-            FAluno tela_aluno = new FAluno();
-            tela_aluno.ShowDialog();
+            if (this.panelSubTela.Controls.Count > 0)
+                this.panelSubTela.Controls.RemoveAt(0);
+            Form ft = formTela as Form;
+            ft.TopLevel = false;
+            ft.Dock = DockStyle.Fill;
+            this.panelSubTela.Controls.Add(ft);
+            this.panelSubTela.Tag = ft;
+            ft.Show();
+        }
+
+        private void optAluno_Click(object sender, EventArgs e)
+        {
+            if (telaAluno == "fechada")
+            {
+                AbrirTela(new FAluno());
+                telaAluno = "aberta";
+            }
+            else if (telaAluno == "aberta")
+            {
+                telaAluno = "fechada";
+                //AbrirTela(new FFundo());
+                if (this.panelSubTela.Controls.Count > 0)
+                {
+                    this.panelSubTela.Controls.RemoveAt(0);
+                }
+
+            }
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (telaCurso == "fechada")
+            {
+                AbrirTela(new FCursos());
+                telaCurso = "aberta";
+            }
+            else if (telaCurso == "aberta")
+            {
+                telaCurso = "fechada";
+                //AbrirTela(new FFundo());
+                if (this.panelSubTela.Controls.Count > 0)
+                {
+                    this.panelSubTela.Controls.RemoveAt(0);
+                }
+
+            }
+            
+        }
+
+        private void sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

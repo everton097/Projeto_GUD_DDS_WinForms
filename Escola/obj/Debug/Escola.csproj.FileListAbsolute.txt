@@ -80,3 +80,5 @@ C:\Users\EvertonSilva\Documents\Faculdade_3semestre\Desenvolvimento_de_Sistemas\
 C:\Users\EvertonSilva\Documents\Faculdade_3semestre\Desenvolvimento_de_Sistemas\Projeto_GUD_DDS_WinForms\Escola\obj\Debug\Escola.csproj.CopyComplete
 C:\Users\EvertonSilva\Documents\Faculdade_3semestre\Desenvolvimento_de_Sistemas\Projeto_GUD_DDS_WinForms\Escola\obj\Debug\Escola.exe
 C:\Users\EvertonSilva\Documents\Faculdade_3semestre\Desenvolvimento_de_Sistemas\Projeto_GUD_DDS_WinForms\Escola\obj\Debug\Escola.pdb
+C:\Users\EvertonSilva\Documents\Faculdade_3semestre\Desenvolvimento_de_Sistemas\Projeto_GUD_DDS_WinForms\Escola\obj\Debug\Escola.view.FCursos.resources
+C:\Users\EvertonSilva\Documents\Faculdade_3semestre\Desenvolvimento_de_Sistemas\Projeto_GUD_DDS_WinForms\Escola\obj\Debug\Escola.view.FFundo.resources

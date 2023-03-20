@@ -25,6 +25,7 @@ namespace Escola.view
         {
             InitializeComponent();
         }
+
         public void desabilitarCampos()
         {
             txtid.Enabled = false;

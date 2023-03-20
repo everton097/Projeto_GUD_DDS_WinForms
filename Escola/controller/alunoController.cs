@@ -79,7 +79,7 @@ namespace Escola.controller
                 da.Fill(tabela);
 
                 //4 passo - Fechar a conexão do DB
-                conexao.Clone();
+                conexao.Close();
 
                 return tabela;
 
@@ -98,8 +98,8 @@ namespace Escola.controller
             {
                 //1 passo - Criar o DataTable e o comando SQL
                 DataTable tabela = new DataTable();
-                String sql = "SELECT * FROM aluno WHERE nome LIKE @nome;";
-
+                String sql = "SELECT id, nome as 'Nome Completo',rg,cpf,email,celular,cep,endereco,numero,bairro,cidade, uf FROM aluno WHERE nome LIKE @nome;";
+                //String sql = "SELECT id, nome as nome completo, * FROM aluno WHERE nome LIKE @nome;";
                 //2 passo - Organizar o comando SQL e executar 
                 MySqlCommand executaCMD = new MySqlCommand(sql,conexao);
                 executaCMD.Parameters.AddWithValue("@nome", nome);
