@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Escola.view;
 using System.Runtime.InteropServices;
+using Escola.model;
 
 namespace Escola
 {
@@ -75,56 +76,89 @@ namespace Escola
         string telaAluno = "fechada";
         string telaCurso = "fechada";
 
-        private void AbrirTela(object formTela)
+        Form foAluno = new Form();
+        Form foCurso = new Form();
+
+        private void AbrirTelaAluno(object formTela)
         {
-            if (this.panelSubTela.Controls.Count > 0)
-                this.panelSubTela.Controls.RemoveAt(0);
-            Form ft = formTela as Form;
-            ft.TopLevel = false;
-            ft.Dock = DockStyle.Fill;
-            this.panelSubTela.Controls.Add(ft);
-            this.panelSubTela.Tag = ft;
-            ft.Show();
+            if (foAluno.Controls.Count == 0 && telaAluno == "fechada")//Inicia uma nova tela de Aluno - se Controls de foAluno == 0 && telaAluno == "fechada"
+            {
+                this.panelSubTela.Controls.Clear(); 
+                foAluno = formTela as Form;
+                foAluno.TopLevel = false;
+                foAluno.Dock = DockStyle.Fill;
+                this.panelSubTela.Controls.Add(foAluno);
+                this.panelSubTela.Tag = foAluno;
+                foAluno.Show();
+                telaAluno = "aberta";
+                MessageBox.Show("Final de ABRIR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: " + telaAluno);
+            }
+            else if (foAluno.Controls.Count > 0 && telaAluno == "aberta")//Apaga os Controls da tela de Aluno - se existir Controls de foAluno > 0 && telaAluno == "aberta"
+            {
+                this.panelSubTela.Controls.Clear();
+                foAluno.Controls.Clear();
+                telaAluno = "fechada";
+                MessageBox.Show("Final de FECHAR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: "+ telaAluno);
+            } else if (this.panelSubTela.Controls.Count > 0 && telaAluno == "fechada")//Mostra a tela de Aluno - se existir Controls de Form foAluno > 0 && telaAluno == "fechada"
+            {
+                this.panelSubTela.Controls.Clear();
+                foAluno.TopLevel = false;
+                foAluno.Dock = DockStyle.Fill;
+                this.panelSubTela.Controls.Add(foAluno);
+                this.panelSubTela.Tag = foAluno;
+                foAluno.Show();
+                telaAluno = "aberta";
+                MessageBox.Show("Final de ABRIR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: " + telaAluno);
+            }
         }
+
+        private void AbrirTelaCurso(object formTela)
+        {
+            if (foCurso.Controls.Count == 0 && telaCurso == "fechada")
+            {
+                this.panelSubTela.Controls.Clear();
+                foCurso = formTela as Form;
+                foCurso.TopLevel = false;
+                foCurso.Dock = DockStyle.Fill;
+                this.panelSubTela.Controls.Add(foCurso);
+                this.panelSubTela.Tag = foCurso;
+                foCurso.Show();
+                telaCurso = "aberta";
+                MessageBox.Show("Final de ABRIR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: " + telaCurso);
+            }
+            else if (foCurso.Controls.Count > 0 && telaCurso == "aberta")
+            {
+                this.panelSubTela.Controls.Clear();
+                foCurso.Controls.Clear();
+                telaCurso = "fechada";
+                MessageBox.Show("Final de FECHAR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: " + telaCurso);
+            }
+            else if (this.panelSubTela.Controls.Count > 0 && telaCurso == "fechada")
+            {
+                this.panelSubTela.Controls.Clear();
+                foCurso.TopLevel = false;
+                foCurso.Dock = DockStyle.Fill;
+                this.panelSubTela.Controls.Add(foCurso);
+                this.panelSubTela.Tag = foCurso;
+                foCurso.Show();
+                telaCurso = "aberta";
+                MessageBox.Show("Final de ABRIR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: " + telaCurso);
+            }
+        }
+
 
         private void optAluno_Click(object sender, EventArgs e)
         {
-            if (telaAluno == "fechada")
-            {
-                AbrirTela(new FAluno());
-                telaAluno = "aberta";
-            }
-            else if (telaAluno == "aberta")
-            {
-                telaAluno = "fechada";
-                //AbrirTela(new FFundo());
-                if (this.panelSubTela.Controls.Count > 0)
-                {
-                    this.panelSubTela.Controls.RemoveAt(0);
-                }
-
-            }
-            
+            MessageBox.Show("CLICK EM ALUNO \nQTDE SubTela Controls: " + this.panelSubTela.Controls.Count + "\nStatus Aluno: " + telaAluno+ "\nStatus Curso: " + telaCurso);
+            AbrirTelaAluno(new FAluno());
+            telaCurso = "fechada";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (telaCurso == "fechada")
-            {
-                AbrirTela(new FCursos());
-                telaCurso = "aberta";
-            }
-            else if (telaCurso == "aberta")
-            {
-                telaCurso = "fechada";
-                //AbrirTela(new FFundo());
-                if (this.panelSubTela.Controls.Count > 0)
-                {
-                    this.panelSubTela.Controls.RemoveAt(0);
-                }
-
-            }
-            
+            telaAluno = "fechada";
+            AbrirTelaCurso(new FCursos());
+            MessageBox.Show("CLICK EM CURSO \nQTDE SubTela Controls: " + this.panelSubTela.Controls.Count + "\nStatus Aluno: " + telaAluno+ "\nStatus Curso: " + telaCurso);
         }
 
         private void sair_Click(object sender, EventArgs e)
