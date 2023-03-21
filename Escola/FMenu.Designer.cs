@@ -56,9 +56,9 @@
             this.BarraDeTitulo.Controls.Add(this.BotaoRestaurar);
             this.BarraDeTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraDeTitulo.Location = new System.Drawing.Point(0, 0);
-            this.BarraDeTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BarraDeTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BarraDeTitulo.Name = "BarraDeTitulo";
-            this.BarraDeTitulo.Size = new System.Drawing.Size(946, 24);
+            this.BarraDeTitulo.Size = new System.Drawing.Size(1261, 30);
             this.BarraDeTitulo.TabIndex = 2;
             this.BarraDeTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraDeTitulo_MouseDown);
             // 
@@ -73,10 +73,10 @@
             this.BotaoMinimizar.FlatAppearance.BorderSize = 0;
             this.BotaoMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
             this.BotaoMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotaoMinimizar.Location = new System.Drawing.Point(820, 3);
-            this.BotaoMinimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotaoMinimizar.Location = new System.Drawing.Point(1093, 4);
+            this.BotaoMinimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BotaoMinimizar.Name = "BotaoMinimizar";
-            this.BotaoMinimizar.Size = new System.Drawing.Size(34, 19);
+            this.BotaoMinimizar.Size = new System.Drawing.Size(45, 23);
             this.BotaoMinimizar.TabIndex = 6;
             this.BotaoMinimizar.UseVisualStyleBackColor = false;
             this.BotaoMinimizar.Click += new System.EventHandler(this.BotaoMinimizar_Click);
@@ -92,10 +92,10 @@
             this.BotaoFechar.FlatAppearance.BorderSize = 0;
             this.BotaoFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
             this.BotaoFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotaoFechar.Location = new System.Drawing.Point(904, 3);
-            this.BotaoFechar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotaoFechar.Location = new System.Drawing.Point(1205, 4);
+            this.BotaoFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BotaoFechar.Name = "BotaoFechar";
-            this.BotaoFechar.Size = new System.Drawing.Size(34, 19);
+            this.BotaoFechar.Size = new System.Drawing.Size(45, 23);
             this.BotaoFechar.TabIndex = 4;
             this.BotaoFechar.UseVisualStyleBackColor = false;
             this.BotaoFechar.Click += new System.EventHandler(this.BotaoFechar_Click);
@@ -111,10 +111,10 @@
             this.BotaoMaximizar.FlatAppearance.BorderSize = 0;
             this.BotaoMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
             this.BotaoMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotaoMaximizar.Location = new System.Drawing.Point(859, 3);
-            this.BotaoMaximizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotaoMaximizar.Location = new System.Drawing.Point(1145, 4);
+            this.BotaoMaximizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BotaoMaximizar.Name = "BotaoMaximizar";
-            this.BotaoMaximizar.Size = new System.Drawing.Size(34, 19);
+            this.BotaoMaximizar.Size = new System.Drawing.Size(45, 23);
             this.BotaoMaximizar.TabIndex = 5;
             this.BotaoMaximizar.UseVisualStyleBackColor = false;
             this.BotaoMaximizar.Click += new System.EventHandler(this.BotaoMaximizar_Click);
@@ -130,10 +130,10 @@
             this.BotaoRestaurar.FlatAppearance.BorderSize = 0;
             this.BotaoRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
             this.BotaoRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotaoRestaurar.Location = new System.Drawing.Point(859, 3);
-            this.BotaoRestaurar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotaoRestaurar.Location = new System.Drawing.Point(1145, 4);
+            this.BotaoRestaurar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BotaoRestaurar.Name = "BotaoRestaurar";
-            this.BotaoRestaurar.Size = new System.Drawing.Size(34, 19);
+            this.BotaoRestaurar.Size = new System.Drawing.Size(45, 23);
             this.BotaoRestaurar.TabIndex = 7;
             this.BotaoRestaurar.UseVisualStyleBackColor = false;
             this.BotaoRestaurar.Visible = false;
@@ -148,10 +148,10 @@
             this.BarraMenuLataral.Controls.Add(this.panel2);
             this.BarraMenuLataral.Controls.Add(this.optAluno);
             this.BarraMenuLataral.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BarraMenuLataral.Location = new System.Drawing.Point(0, 24);
-            this.BarraMenuLataral.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BarraMenuLataral.Location = new System.Drawing.Point(0, 30);
+            this.BarraMenuLataral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BarraMenuLataral.Name = "BarraMenuLataral";
-            this.BarraMenuLataral.Size = new System.Drawing.Size(128, 523);
+            this.BarraMenuLataral.Size = new System.Drawing.Size(171, 643);
             this.BarraMenuLataral.TabIndex = 3;
             // 
             // sair
@@ -159,17 +159,17 @@
             this.sair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.sair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.sair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sair.BackgroundImage")));
+            this.sair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.sair.FlatAppearance.BorderSize = 0;
             this.sair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sair.ForeColor = System.Drawing.Color.White;
-            this.sair.Image = ((System.Drawing.Image)(resources.GetObject("sair.Image")));
-            this.sair.Location = new System.Drawing.Point(8, 477);
-            this.sair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sair.Location = new System.Drawing.Point(24, 522);
+            this.sair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sair.Name = "sair";
-            this.sair.Size = new System.Drawing.Size(41, 37);
+            this.sair.Size = new System.Drawing.Size(118, 110);
             this.sair.TabIndex = 10;
             this.sair.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.sair.UseVisualStyleBackColor = false;
@@ -179,10 +179,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel3.Location = new System.Drawing.Point(5, 38);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(7, 47);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(4, 28);
+            this.panel3.Size = new System.Drawing.Size(5, 34);
             this.panel3.TabIndex = 9;
             // 
             // button4
@@ -196,11 +196,11 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(9, 38);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(12, 47);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(134, 28);
+            this.button4.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(179, 34);
             this.button4.TabIndex = 8;
             this.button4.Text = " Cursos";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -212,10 +212,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.Location = new System.Drawing.Point(5, 5);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(7, 6);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(4, 28);
+            this.panel2.Size = new System.Drawing.Size(5, 34);
             this.panel2.TabIndex = 7;
             // 
             // optAluno
@@ -229,11 +229,11 @@
             this.optAluno.ForeColor = System.Drawing.Color.White;
             this.optAluno.Image = ((System.Drawing.Image)(resources.GetObject("optAluno.Image")));
             this.optAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.optAluno.Location = new System.Drawing.Point(9, 5);
-            this.optAluno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.optAluno.Location = new System.Drawing.Point(12, 6);
+            this.optAluno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optAluno.Name = "optAluno";
-            this.optAluno.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.optAluno.Size = new System.Drawing.Size(134, 28);
+            this.optAluno.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.optAluno.Size = new System.Drawing.Size(179, 34);
             this.optAluno.TabIndex = 6;
             this.optAluno.Text = " Alunos";
             this.optAluno.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -253,21 +253,22 @@
             this.panelSubTela.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelSubTela.BackgroundImage")));
             this.panelSubTela.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelSubTela.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSubTela.Location = new System.Drawing.Point(128, 24);
-            this.panelSubTela.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSubTela.Location = new System.Drawing.Point(171, 30);
+            this.panelSubTela.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSubTela.Name = "panelSubTela";
-            this.panelSubTela.Size = new System.Drawing.Size(818, 523);
+            this.panelSubTela.Size = new System.Drawing.Size(1090, 643);
             this.panelSubTela.TabIndex = 4;
             // 
             // FMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 547);
+            this.ClientSize = new System.Drawing.Size(1261, 673);
             this.Controls.Add(this.panelSubTela);
             this.Controls.Add(this.BarraMenuLataral);
             this.Controls.Add(this.BarraDeTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema Escola";
