@@ -18,6 +18,11 @@ namespace Escola
         public FMenu()
         {
             InitializeComponent();
+
+
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,14 +96,14 @@ namespace Escola
                 this.panelSubTela.Tag = foAluno;
                 foAluno.Show();
                 telaAluno = "aberta";
-                MessageBox.Show("Aluno ABRIR");
+                //MessageBox.Show("Aluno ABRIR");
             }
             else if (foAluno.Controls.Count > 0 && telaAluno == "aberta")//Apaga os Controls da tela de Aluno - se existir Controls de foAluno > 0 && telaAluno == "aberta"
             {
                 this.panelSubTela.Controls.Clear();
                 foAluno.Controls.Clear();
                 telaAluno = "fechada";
-                MessageBox.Show("Aluno FECHAR");
+                //MessageBox.Show("Aluno FECHAR");
             } else if (foAluno.Controls.Count > 0 && telaAluno == "fechada")//Mostra a tela de Aluno - se existir Controls de Form foAluno > 0 && telaAluno == "fechada"
             {
                 this.panelSubTela.Controls.Clear();
@@ -108,7 +113,7 @@ namespace Escola
                 this.panelSubTela.Tag = foAluno;
                 foAluno.Show();
                 telaAluno = "aberta";
-                MessageBox.Show("Aluno Mostrar");
+                //MessageBox.Show("Aluno Mostrar");
             }
         }
 
@@ -124,14 +129,14 @@ namespace Escola
                 this.panelSubTela.Tag = foCurso;
                 foCurso.Show();
                 telaCurso = "aberta";
-                MessageBox.Show("Curso ABRIR");
+                //MessageBox.Show("Curso ABRIR");
             }
             else if (foCurso.Controls.Count > 0 && telaCurso == "aberta")
             {
                 this.panelSubTela.Controls.Clear();
                 foCurso.Controls.Clear();
                 telaCurso = "fechada";
-                MessageBox.Show("Curso FECHAR");
+                //MessageBox.Show("Curso FECHAR");
             }
             else if (foCurso.Controls.Count > 0 && telaCurso == "fechada")
             {
@@ -142,7 +147,7 @@ namespace Escola
                 this.panelSubTela.Tag = foCurso;
                 foCurso.Show();
                 telaCurso = "aberta";
-                MessageBox.Show("Curso Mostrar");
+                //MessageBox.Show("Curso Mostrar");
             }
         }
 
