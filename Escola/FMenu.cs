@@ -91,15 +91,15 @@ namespace Escola
                 this.panelSubTela.Tag = foAluno;
                 foAluno.Show();
                 telaAluno = "aberta";
-                MessageBox.Show("Final de ABRIR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: " + telaAluno);
+                MessageBox.Show("Aluno ABRIR");
             }
             else if (foAluno.Controls.Count > 0 && telaAluno == "aberta")//Apaga os Controls da tela de Aluno - se existir Controls de foAluno > 0 && telaAluno == "aberta"
             {
                 this.panelSubTela.Controls.Clear();
                 foAluno.Controls.Clear();
                 telaAluno = "fechada";
-                MessageBox.Show("Final de FECHAR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: "+ telaAluno);
-            } else if (this.panelSubTela.Controls.Count > 0 && telaAluno == "fechada")//Mostra a tela de Aluno - se existir Controls de Form foAluno > 0 && telaAluno == "fechada"
+                MessageBox.Show("Aluno FECHAR");
+            } else if (foAluno.Controls.Count > 0 && telaAluno == "fechada")//Mostra a tela de Aluno - se existir Controls de Form foAluno > 0 && telaAluno == "fechada"
             {
                 this.panelSubTela.Controls.Clear();
                 foAluno.TopLevel = false;
@@ -108,7 +108,7 @@ namespace Escola
                 this.panelSubTela.Tag = foAluno;
                 foAluno.Show();
                 telaAluno = "aberta";
-                MessageBox.Show("Final de ABRIR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: " + telaAluno);
+                MessageBox.Show("Aluno Mostrar");
             }
         }
 
@@ -124,16 +124,16 @@ namespace Escola
                 this.panelSubTela.Tag = foCurso;
                 foCurso.Show();
                 telaCurso = "aberta";
-                MessageBox.Show("Final de ABRIR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: " + telaCurso);
+                MessageBox.Show("Curso ABRIR");
             }
             else if (foCurso.Controls.Count > 0 && telaCurso == "aberta")
             {
                 this.panelSubTela.Controls.Clear();
                 foCurso.Controls.Clear();
                 telaCurso = "fechada";
-                MessageBox.Show("Final de FECHAR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: " + telaCurso);
+                MessageBox.Show("Curso FECHAR");
             }
-            else if (this.panelSubTela.Controls.Count > 0 && telaCurso == "fechada")
+            else if (foCurso.Controls.Count > 0 && telaCurso == "fechada")
             {
                 this.panelSubTela.Controls.Clear();
                 foCurso.TopLevel = false;
@@ -142,23 +142,21 @@ namespace Escola
                 this.panelSubTela.Tag = foCurso;
                 foCurso.Show();
                 telaCurso = "aberta";
-                MessageBox.Show("Final de ABRIR \nQTDE de Controls: " + this.panelSubTela.Controls.Count + "\nStatus: " + telaCurso);
+                MessageBox.Show("Curso Mostrar");
             }
         }
 
 
         private void optAluno_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("CLICK EM ALUNO \nQTDE SubTela Controls: " + this.panelSubTela.Controls.Count + "\nStatus Aluno: " + telaAluno+ "\nStatus Curso: " + telaCurso);
             AbrirTelaAluno(new FAluno());
             telaCurso = "fechada";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            telaAluno = "fechada";
             AbrirTelaCurso(new FCursos());
-            MessageBox.Show("CLICK EM CURSO \nQTDE SubTela Controls: " + this.panelSubTela.Controls.Count + "\nStatus Aluno: " + telaAluno+ "\nStatus Curso: " + telaCurso);
+            telaAluno = "fechada";
         }
 
         private void sair_Click(object sender, EventArgs e)
