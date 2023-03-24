@@ -269,7 +269,8 @@
             this.tabelaCurso.RowTemplate.Height = 24;
             this.tabelaCurso.Size = new System.Drawing.Size(1078, 447);
             this.tabelaCurso.TabIndex = 7;
-            this.tabelaCurso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaCurso_CellDoubleClick);
+            this.tabelaCurso.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaCurso_CellClick);
+            this.tabelaCurso.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaCurso_CellDoubleClick_1);
             // 
             // bPesquisarCurso
             // 
@@ -328,10 +329,11 @@
             this.botaoEditarCurso.TabIndex = 3;
             this.botaoEditarCurso.Text = "Editar";
             this.botaoEditarCurso.UseVisualStyleBackColor = false;
+            this.botaoEditarCurso.Click += new System.EventHandler(this.botaoEditarCurso_Click);
             // 
             // botaoExcluirCurso
             // 
-            this.botaoExcluirCurso.BackColor = System.Drawing.Color.LightCoral;
+            this.botaoExcluirCurso.BackColor = System.Drawing.Color.Red;
             this.botaoExcluirCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.botaoExcluirCurso.ForeColor = System.Drawing.Color.White;
             this.botaoExcluirCurso.Location = new System.Drawing.Point(534, 16);
@@ -341,6 +343,7 @@
             this.botaoExcluirCurso.TabIndex = 2;
             this.botaoExcluirCurso.Text = "Excluir";
             this.botaoExcluirCurso.UseVisualStyleBackColor = false;
+            this.botaoExcluirCurso.Click += new System.EventHandler(this.botaoExcluirCurso_Click);
             // 
             // botaoSalvarCurso
             // 

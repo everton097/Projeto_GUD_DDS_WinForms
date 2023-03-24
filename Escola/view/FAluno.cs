@@ -87,6 +87,7 @@ namespace Escola.view
                 habilitarCampos();
                 limparCampos();
                 status = "inserindo";
+                botaonovo.Enabled = false;
             }
             else
             {
@@ -124,11 +125,13 @@ namespace Escola.view
                 {
                     controller.cadrastroAluno(obj);
                     status= "success";
+                    desabilitarCampos();
                 }else if(status == "alterando")
                 {
                     obj.Id = int.Parse(txtid.Text);
                     controller.alterarAluno(obj);
                     status= "success";
+                    desabilitarCampos();
                 }
 
             
@@ -151,11 +154,18 @@ namespace Escola.view
                 MessageBox.Show("Nenhum aluno encontrado com esse Nome.");
                 tabelaAluno.DataSource = controller.listarAlunos();
             }
+            botaoexcluir.Enabled = true;
         }
 
         private void tabelaAluno_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            //if para evitar bug do botao novo com editar registro
+            if (status == "inserindo")
+            {
+                desabilitarCampos();
+                status= "";
 
+            }
             //Pegar os itens da linha seecionada para o texbox
 
             txtid.Text = tabelaAluno.CurrentRow.Cells[0].Value.ToString();
@@ -174,6 +184,8 @@ namespace Escola.view
             tabControl1.SelectedTab = tabPage1;
 
             botaoeditar.Enabled = true;//Habilita o botão EDITAR
+            botaoexcluir.Enabled = true;
+            
         }
 
         private void botaoeditar_Click(object sender, EventArgs e)
@@ -181,6 +193,33 @@ namespace Escola.view
             habilitarCampos();
             botaosalvar.Enabled = true;
             status = "alterando";
+        }
+
+        private void botaoexcluir_Click(object sender, EventArgs e)
+        {   //Pergunta ao user se realmente quer remover o registro.
+            DialogResult dialogResult = MessageBox.Show("Tem certeza que deseja excluir ?", "Pergunta",MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {//se user responder sim - Instancia o objeto aluno.
+                Aluno obj = new Aluno();
+                //captura o valor de ID na caixa de texto.
+                obj.Id =int.Parse(txtid.Text);
+                //instancia o método excluir aluno
+                alunoController controller = new alunoController();
+                //executa a metodo excluir aluno.
+                controller.excluirAluno(obj);
+                //atualiza a consulta dos alunos cadrastrado.
+                tabelaAluno.DataSource = controller.listarAlunos();
+            }
+            //limpa dados do aluno removido.
+            limparCampos();
+            botaoeditar.Enabled = false;
+            botaoexcluir.Enabled=false;
+        }
+
+        private void tabelaAluno_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtid.Text = tabelaAluno.CurrentRow.Cells[0].Value.ToString();
         }
     }
 }

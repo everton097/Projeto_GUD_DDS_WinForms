@@ -156,6 +156,32 @@ namespace Escola.controller
 
         }
 
+        public void excluirCurso(Curso obj)
+        {
+            try
+            {
+                //Defenir o comando SQL
+
+                string sql = "DELETE FROM curso WHERE id = @id;";
+
+                //Organizar o SQL e definir os parametros.
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@id", obj.Id);
+
+                //Abrir a conexao e executar o SQL
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+                MessageBox.Show("Curso excluido com sucesso!");
+
+                //Fechar conexao
+                conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Aconteceu um erro: " + ex);
+            }
+        }
+
 
 
 

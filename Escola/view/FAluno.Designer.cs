@@ -104,7 +104,7 @@
             // 
             // botaoexcluir
             // 
-            this.botaoexcluir.BackColor = System.Drawing.Color.LightCoral;
+            this.botaoexcluir.BackColor = System.Drawing.Color.Red;
             this.botaoexcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.botaoexcluir.ForeColor = System.Drawing.Color.White;
             this.botaoexcluir.Location = new System.Drawing.Point(534, 16);
@@ -114,6 +114,7 @@
             this.botaoexcluir.TabIndex = 2;
             this.botaoexcluir.Text = "Excluir";
             this.botaoexcluir.UseVisualStyleBackColor = false;
+            this.botaoexcluir.Click += new System.EventHandler(this.botaoexcluir_Click);
             // 
             // botaosalvar
             // 
@@ -509,6 +510,7 @@
             this.tabelaAluno.RowTemplate.Height = 24;
             this.tabelaAluno.Size = new System.Drawing.Size(1076, 447);
             this.tabelaAluno.TabIndex = 3;
+            this.tabelaAluno.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaAluno_CellClick);
             this.tabelaAluno.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaAluno_CellDoubleClick);
             // 
             // bPesquisar
